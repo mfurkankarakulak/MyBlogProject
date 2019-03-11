@@ -1,0 +1,12 @@
+C:\Users\furkan.karakulak\Documents\Visual Studio 2015\Projects\MyBlogProject\MyBlogProject.Dal\bin\Debug\MyBlogProject.Dal.dll.config
+C:\Users\furkan.karakulak\Documents\Visual Studio 2015\Projects\MyBlogProject\MyBlogProject.Dal\bin\Debug\MyBlogProject.Dal.dll
+C:\Users\furkan.karakulak\Documents\Visual Studio 2015\Projects\MyBlogProject\MyBlogProject.Dal\bin\Debug\MyBlogProject.Dal.pdb
+C:\Users\furkan.karakulak\Documents\Visual Studio 2015\Projects\MyBlogProject\MyBlogProject.Dal\bin\Debug\EntityFramework.dll
+C:\Users\furkan.karakulak\Documents\Visual Studio 2015\Projects\MyBlogProject\MyBlogProject.Dal\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\furkan.karakulak\Documents\Visual Studio 2015\Projects\MyBlogProject\MyBlogProject.Dal\bin\Debug\MyBlogProject.Entity.dll
+C:\Users\furkan.karakulak\Documents\Visual Studio 2015\Projects\MyBlogProject\MyBlogProject.Dal\bin\Debug\MyBlogProject.Entity.pdb
+C:\Users\furkan.karakulak\Documents\Visual Studio 2015\Projects\MyBlogProject\MyBlogProject.Dal\bin\Debug\EntityFramework.xml
+C:\Users\furkan.karakulak\Documents\Visual Studio 2015\Projects\MyBlogProject\MyBlogProject.Dal\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\furkan.karakulak\Documents\Visual Studio 2015\Projects\MyBlogProject\MyBlogProject.Dal\obj\Debug\MyBlogProject.Dal.csprojResolveAssemblyReference.cache
+C:\Users\furkan.karakulak\Documents\Visual Studio 2015\Projects\MyBlogProject\MyBlogProject.Dal\obj\Debug\MyBlogProject.Dal.dll
+C:\Users\furkan.karakulak\Documents\Visual Studio 2015\Projects\MyBlogProject\MyBlogProject.Dal\obj\Debug\MyBlogProject.Dal.pdb
