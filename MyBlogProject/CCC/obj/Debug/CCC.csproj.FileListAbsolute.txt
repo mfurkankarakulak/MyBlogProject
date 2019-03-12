@@ -1,0 +1,12 @@
+C:\Users\furkan.karakulak\Desktop\MyBlogProject\MyBlogProject\CCC\bin\Debug\CCC.dll
+C:\Users\furkan.karakulak\Desktop\MyBlogProject\MyBlogProject\CCC\bin\Debug\CCC.pdb
+C:\Users\furkan.karakulak\Desktop\MyBlogProject\MyBlogProject\CCC\bin\Debug\FluentValidation.dll
+C:\Users\furkan.karakulak\Desktop\MyBlogProject\MyBlogProject\CCC\bin\Debug\MyBlogProject.Entity.dll
+C:\Users\furkan.karakulak\Desktop\MyBlogProject\MyBlogProject\CCC\bin\Debug\System.ComponentModel.Primitives.dll
+C:\Users\furkan.karakulak\Desktop\MyBlogProject\MyBlogProject\CCC\bin\Debug\System.ValueTuple.dll
+C:\Users\furkan.karakulak\Desktop\MyBlogProject\MyBlogProject\CCC\bin\Debug\MyBlogProject.Entity.pdb
+C:\Users\furkan.karakulak\Desktop\MyBlogProject\MyBlogProject\CCC\bin\Debug\FluentValidation.xml
+C:\Users\furkan.karakulak\Desktop\MyBlogProject\MyBlogProject\CCC\bin\Debug\System.ValueTuple.xml
+C:\Users\furkan.karakulak\Desktop\MyBlogProject\MyBlogProject\CCC\obj\Debug\CCC.csprojResolveAssemblyReference.cache
+C:\Users\furkan.karakulak\Desktop\MyBlogProject\MyBlogProject\CCC\obj\Debug\CCC.dll
+C:\Users\furkan.karakulak\Desktop\MyBlogProject\MyBlogProject\CCC\obj\Debug\CCC.pdb

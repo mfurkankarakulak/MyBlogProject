@@ -27,6 +27,7 @@ namespace MyBlogProject.Dal.Context
         public DbSet<Tag> Tag { get; set; }
         public DbSet<ContentTag> ContentTag { get; set; }
         public DbSet<ContentImage> ContentImage { get; set; }
+        public DbSet<Sex> Sex { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -40,6 +41,7 @@ namespace MyBlogProject.Dal.Context
             modelBuilder.Configurations.Add(new RoleMap());
             modelBuilder.Configurations.Add(new TagMap());
             modelBuilder.Configurations.Add(new UserMap());
+            modelBuilder.Configurations.Add(new SexMap());
 
             base.OnModelCreating(modelBuilder);
         }
