@@ -26,11 +26,13 @@
 </style>
 <div class="container">
     <div class="row">
+       
         @Html.ValidationSummary(true, "", new { @class = "text-danger" });
         <div class="col-xs-12 col-sm-12 col-md-4 well well-sm login-form-1">
             @Html.Label("Sign Up", new { @class = "textColor" });
           
               <form method="post" action="@Url.Action("UserSignUp", "UserLogin")">
+                  @Html.AntiForgeryToken();
                 <div class="row">
 
                     <div class="col-xs-6 col-md-6">
@@ -87,11 +89,11 @@
                       </div>
                   </div>
                 <label class="radio-inline textColor">
-                    @Html.RadioButtonFor(x => x.SexId, 1)
+                    @Html.RadioButtonFor(x => x.Sex, 1)
                     Male
                 </label>
                 <label class="radio-inline textColor">
-                    @Html.RadioButtonFor(x => x.SexId, 0)
+                    @Html.RadioButtonFor(x => x.Sex, 0)
                     Female
                 </label>
                 <br />
