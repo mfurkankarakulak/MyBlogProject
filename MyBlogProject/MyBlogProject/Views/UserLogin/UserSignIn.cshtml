@@ -1,4 +1,4 @@
-﻿
+﻿@model MyBlogProject.Entity.Models.User
 @{
     ViewBag.Title = "UserSignIn";
 }
@@ -73,17 +73,24 @@
     <div class="d-flex justify-content-center h-100">
         <div class="card">
             <div class="col-md-6 login-form-1">
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" });
                 <h3>Sign In</h3>
+                @using (Html.BeginForm())
+                {
+                        @Html.AntiForgeryToken();
 
-                <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Your Email *" value="" />
-                </div>
-                <div class="form-group">
-                    <input type="password" class="form-control" placeholder="Your Password *" value="" />
-                </div>
-                <div class="form-group">
-                    <input type="submit" class="btnSubmit" value="Login" />
-                </div>
+                    <div class="form-group">
+                        @Html.EditorFor(x => x.EMailAdress,new { htmlAttributes = new { @class = "form-control", @placeholder = "Your Email *", @type = "text" } });
+                        @Html.ValidationMessageFor(model => model.EMailAdress, "", new { @class = "text-danger" });
+                    </div>
+                    <div class="form-group">
+                        @Html.EditorFor(x => x.Password, new { htmlAttributes = new { @class = "form-control", @placeholder = "Your Password *", @type = "text" } });
+                        @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" });
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" class="btnSubmit" value="Login" />
+                    </div>
+                }
                 <div class="form-group">
                     <a href="#" class="btnForgetPwd">Forget Password?</a>
                 </div>

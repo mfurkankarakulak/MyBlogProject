@@ -10,6 +10,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
+
 namespace MyBlogProject.Controllers
 {
     public class UserLoginController : Controller
@@ -34,6 +35,34 @@ namespace MyBlogProject.Controllers
         // GET: UserLogin
         public ActionResult UserSignIn()
         {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult UserSignIn(User user)
+        {
+            try
+            {
+                var ExistUser = _userRepository.GetAll(x => x.EMailAdress == user.EMailAdress).SingleOrDefault();
+
+                if (ExistUser != null)
+                {
+                    if (ExistUser.Password.Equals(user.Password))
+                    {
+
+                    }
+                    else
+                    {
+                       
+                    }
+                }
+            }
+            catch(Exception ex)
+            {
+
+            }
+            
+
+
             return View();
         }
 
