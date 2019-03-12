@@ -22,7 +22,7 @@ namespace MyBlogProject.Entity.Models
         public int CityId { get; set; }
         public int TryPasswordCount { get; set; }
         public DateTime RegisterTime { get; set; }
-        public int Sex { get; set; }
+        public int SexId { get; set; }
 
 
 

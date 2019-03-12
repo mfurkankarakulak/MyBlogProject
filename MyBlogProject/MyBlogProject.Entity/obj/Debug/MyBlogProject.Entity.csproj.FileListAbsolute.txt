@@ -3,3 +3,8 @@ C:\Users\furkan.karakulak\Documents\Visual Studio 2015\Projects\MyBlogProject\My
 C:\Users\furkan.karakulak\Documents\Visual Studio 2015\Projects\MyBlogProject\MyBlogProject.Entity\obj\Debug\MyBlogProject.Entity.dll
 C:\Users\furkan.karakulak\Documents\Visual Studio 2015\Projects\MyBlogProject\MyBlogProject.Entity\obj\Debug\MyBlogProject.Entity.pdb
 C:\Users\furkan.karakulak\Documents\Visual Studio 2015\Projects\MyBlogProject\MyBlogProject.Entity\obj\Debug\MyBlogProject.Entity.csprojResolveAssemblyReference.cache
+C:\Users\furkan.karakulak\Desktop\MyBlogProject\MyBlogProject\MyBlogProject.Entity\bin\Debug\MyBlogProject.Entity.dll
+C:\Users\furkan.karakulak\Desktop\MyBlogProject\MyBlogProject\MyBlogProject.Entity\bin\Debug\MyBlogProject.Entity.pdb
+C:\Users\furkan.karakulak\Desktop\MyBlogProject\MyBlogProject\MyBlogProject.Entity\obj\Debug\MyBlogProject.Entity.csprojResolveAssemblyReference.cache
+C:\Users\furkan.karakulak\Desktop\MyBlogProject\MyBlogProject\MyBlogProject.Entity\obj\Debug\MyBlogProject.Entity.dll
+C:\Users\furkan.karakulak\Desktop\MyBlogProject\MyBlogProject\MyBlogProject.Entity\obj\Debug\MyBlogProject.Entity.pdb

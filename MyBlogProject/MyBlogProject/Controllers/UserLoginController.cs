@@ -1,4 +1,6 @@
-﻿using MyBlogProject.Dal.Context;
+﻿using CCC.Validations;
+using FluentValidation.Results;
+using MyBlogProject.Dal.Context;
 using MyBlogProject.Dal.Repositories;
 using MyBlogProject.Dal.UnitOfWork;
 using MyBlogProject.Entity.Models;
@@ -17,6 +19,7 @@ namespace MyBlogProject.Controllers
 
         private IRepository<Country> _countryRepository;
         private IRepository<City> _cityRepository;
+        private IRepository<User> _userRepository;
 
         public UserLoginController()
         {
@@ -25,6 +28,7 @@ namespace MyBlogProject.Controllers
 
             _countryRepository = new DataBaseRepository<Country>(_dbContext);
             _cityRepository = new DataBaseRepository<City>(_dbContext);
+            _userRepository = new DataBaseRepository<User>(_dbContext);
         }
 
         // GET: UserLogin
@@ -35,13 +39,50 @@ namespace MyBlogProject.Controllers
 
         public ActionResult UserSignUp()
         {
-          
+            ViewBag.CitiesData =_cityRepository.GetAll();
+            ViewBag.CountriesData = _countryRepository.GetAll();
+
+            return View();
+        }
+        [HttpPost]
+        public ActionResult UserSignUp(User newUser)
+        {
+            ViewBag.CitiesData = _cityRepository.GetAll();
+            ViewBag.CountriesData = _countryRepository.GetAll();
+            UserValidator userValidator = new UserValidator();
+
+            ValidationResult result = userValidator.Validate(newUser);
+            
+            if (result.IsValid == false)
+            {
+                foreach (var error in result.Errors)
+                {
+                    ModelState.AddModelError(error.PropertyName, error.ErrorMessage);
+                }
+                return View();
+            }
+            else
+            {
+                try
+                {
+                    newUser.RegisterTime = DateTime.Now;
+                    newUser.TryPasswordCount = 0;
+
+                    _userRepository.Add(newUser);
+                    _uow.SaveChanges();
+                }
+                catch(Exception ex)
+                {
+                    throw ex;
+                }
+               
+            }
             return View();
         }
         public JsonResult GetCitiesByCountry(int id)
         {
             int countryId = id;
-
+            
             List<City> result = _cityRepository.GetAll(x => x.CountryId == countryId).ToList();
 
             return Json(result, JsonRequestBehavior.AllowGet);
