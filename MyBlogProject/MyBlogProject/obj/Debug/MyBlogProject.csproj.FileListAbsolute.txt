@@ -110,3 +110,5 @@ C:\Users\furkan.karakulak\Desktop\MyBlogProject\MyBlogProject\MyBlogProject\obj\
 C:\Users\furkan.karakulak\Desktop\MyBlogProject\MyBlogProject\MyBlogProject\obj\Debug\MyBlogProject.pdb
 C:\Users\furkan.karakulak\Desktop\MyBlogProject\MyBlogProject\MyBlogProject\bin\CCC.dll
 C:\Users\furkan.karakulak\Desktop\MyBlogProject\MyBlogProject\MyBlogProject\bin\CCC.pdb
+C:\Users\furkan.karakulak\Desktop\MyBlogProject\MyBlogProject\MyBlogProject\bin\MyBlogProject.Business.dll
+C:\Users\furkan.karakulak\Desktop\MyBlogProject\MyBlogProject\MyBlogProject\bin\MyBlogProject.Business.pdb

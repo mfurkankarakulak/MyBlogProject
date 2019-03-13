@@ -1,0 +1,48 @@
+﻿@model MyBlogProject.Entity.Models.User
+@{
+    ViewBag.Title = "NewPaspport";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    
+}
+
+
+<div class="container">
+    <div id="passwordreset" style="margin-top:50px" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+        <div class="panel panel-info">
+            <div class="panel-heading">
+                <div class="panel-title">Create New Password</div>
+            </div>
+            <div class="panel-body">
+               @using (Html.BeginForm())
+               {
+                @Html.AntiForgeryToken();
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" });
+                    <div class="form-group">
+                        <label for="email" class=" control-label col-sm-3">New password</label>
+                        <div class="col-sm-9">
+                            @Html.PasswordFor(model => model.Password, new { htmlAttributes = new { @class = "form-control", @placeholder = "New Password", @type = "text" } })
+                            @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <div class="form-group">
+                        <label for="email" class=" control-label col-sm-3">Confirm password</label>
+                        <div class="col-sm-9">
+                            @Html.PasswordFor(model => model.Password2, new { htmlAttributes = new { @class = "form-control", @placeholder = "Re-New Password", @type = "text" } })
+                            @Html.ValidationMessageFor(model => model.Password2, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <!-- Button -->
+                        <div class=" col-sm-offset-3 col-sm-9">
+                            <button id="btn-signup" type="button" class="btn btn-success">Submit</button>
+                        </div>
+                    </div>
+               }
+            </div>
+        </div>
+    </div>
+</div>

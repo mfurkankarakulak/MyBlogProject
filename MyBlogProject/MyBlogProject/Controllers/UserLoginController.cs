@@ -1,5 +1,6 @@
 ﻿using CCC.Validations;
 using FluentValidation.Results;
+using MyBlogProject.Business;
 using MyBlogProject.Dal.Context;
 using MyBlogProject.Dal.Repositories;
 using MyBlogProject.Dal.UnitOfWork;
@@ -17,7 +18,7 @@ namespace MyBlogProject.Controllers
     {
         private MyBlogContext _dbContext;
         private IUnitOfWork _uow;
-
+        private string _email;
         private IRepository<Country> _countryRepository;
         private IRepository<City> _cityRepository;
         private IRepository<User> _userRepository;
@@ -48,20 +49,18 @@ namespace MyBlogProject.Controllers
                 {
                     if (ExistUser.Password.Equals(user.Password))
                     {
-
+                        return RedirectToAction("Home", "MainPage");
                     }
                     else
                     {
-                       
+                        ModelState.AddModelError("", "Kullanıcı ismi yada parola hatalı.");
                     }
                 }
             }
             catch(Exception ex)
             {
-
+                ModelState.AddModelError("", ex.Message);
             }
-            
-
 
             return View();
         }
@@ -102,10 +101,69 @@ namespace MyBlogProject.Controllers
                 }
                 catch(Exception ex)
                 {
-                    throw ex;
+                    ModelState.AddModelError("", ex.Message);
                 }
                
             }
+            return View();
+        }
+        public ActionResult ChancePassword()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult ChancePassword(User user)
+        {
+            try
+            {
+                var ExistUser = _userRepository.GetAll(x => x.EMailAdress == user.EMailAdress).SingleOrDefault();
+
+                if (ExistUser != null)
+                {
+                    ModelState.AddModelError("CPas", "Şifrenizi Yenilemeniz için E-Posta Gönderildi");
+                    SendMail.SendMailUser("Şifrenizi Yenileme Linki  http://localhost:21936/UserLogin/NewPaspport?id=", ExistUser.EMailAdress, "Şifre Yenileme");
+                    
+                }
+                else
+                {
+                    ModelState.AddModelError("", "E-Posta Geçersiz");
+                }
+            }
+            catch(Exception ex)
+            {
+                ModelState.AddModelError("", ex.Message);
+            }
+
+            return View();
+        }
+        public ActionResult NewPaspport(string id)//linke birden fazla tıklanma durumu kontrol edilmeli
+        {
+            _email = id;
+            return View();
+        }
+        [HttpPost]
+        public ActionResult NewPaspport(User user)
+        {
+
+            try
+            {
+                var ExistUser = _userRepository.GetAll(x => x.EMailAdress == user.EMailAdress).SingleOrDefault();
+
+                if (ExistUser != null && ExistUser.Password == user.Name)
+                {
+                   
+
+                }
+                else
+                {
+                    
+                }
+            }
+            catch (Exception ex)
+            {
+                ModelState.AddModelError("", ex.Message);
+            }
+
             return View();
         }
         public JsonResult GetCitiesByCountry(int id)
